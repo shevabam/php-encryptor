@@ -1,0 +1,44 @@
+{
+    "name": "phelium/encryptor",
+    "description": "A simple PHP encryption and decryption class with OpenSSL",
+    "keywords": ["encryption", "encrypt", "decrypt", "security", "hash", "openssl"],
+    "homepage": "https://github.com/shevabam/php-encryptor",
+    "type": "library",
+    "license": "GPL-3.0-only",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "support": {
+        "issues": "https://github.com/shevabam/php-encryptor/issues",
+        "source": "https://github.com/shevabam/php-encryptor/tree/master"
+    },
+    "authors": [
+        {
+            "name": "shevabam",
+            "email": "me@shevarezo.fr",
+            "homepage": "https://shevarezo.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Phelium\\Component\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "friendsofphp/php-cs-fixer": "^3.63"
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ],
+        "test:coverage": [
+            "bash run-code-coverage.sh"
+        ],
+        "phpcsfixer": [
+            "vendor/bin/php-cs-fixer --allow-risky=yes --config=.php-cs-fixer.php fix src/ tests/"
+        ]
+    }
+}
